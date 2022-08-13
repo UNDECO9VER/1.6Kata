@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    font-family: "TT Lakes";
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 24px;
+    width: 320px;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.sidebar-header {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.sidebar-header--layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__list-item:last-child:before {
+    display: none;
+}
+
+.cps-logo-link {
+    padding: 0;
+}
+
+.sidebar-nav-list {
+    list-style: none;
+}
+
+.sidebar-nav-list__item {
+    padding: 16px 0;
+}
+
+.active {
+    color: #7E7E82;
+}
+
+.sidebar-nav-list__item {
+    position: relative;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.sidebar-nav-list__item:not(.active):hover {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.sidebar-nav-list__item.active a::before {
+    content: "";
+    margin-left: -24px;
+    position: absolute;
+    height: 32px;
+    border-radius: 0 4px 4px 0;
+    width: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #41F6D7;
+}
+
+.language-switch-list{
+    display: flex;
+    gap: 7px;
+    list-style: none;
+}
+
+.language-switch-list__item{
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.language-switch-list__item:not(.active):hover {
+    font-weight: bold;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contacts__number{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.sidebar-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+

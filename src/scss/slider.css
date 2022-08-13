@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "TT Lakes";
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+.brand-slide{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+
+    align-items: center;
+    max-height: 72px;
+    width: 225px;
+    cursor: pointer;
+    border: 1px solid #EAEAEA;
+    background: white;
+    border-radius: 6px;
+    transition: 0.6s;
+}
+
+.technique-slide{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+
+    height: 160px;
+    width: 240px;
+    cursor: pointer;
+    border: 1px solid #EAEAEA;
+    background: white;
+    border-radius: 6px;
+    transition: 0.6s;
+}
+
+.common-slider__slide{
+    width: auto;
+    display: flex;
+}
+
+.wrapper{
+    margin-top: 200px;
+    background: #F8F8F8;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-slider{
+    height: 140px;
+}
+
+.common-slider{
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    width: auto;
+    flex-direction: column;
+    position: relative;
+}
+
+.technique-slider{
+}
+
+.prices-slider{
+    height: 140px;
+}
+
+.dropdown-image{
+    width: 40px;
+    height: 40px;
+}
+
+.wrapper-header{
+    line-height: 24px;
+    font-weight: normal;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #D9FFF5;
+    min-height: 60px;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    color: #7E7E82;
+}
+.technique-slide .dropdown-image{
+    align-self: end;
+}
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background: #DDDDDD;
+}
+
+.swiper-pagination{
+    position: relative;
+}
+
+.more-btn {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    max-width: 120px;
+    gap: 10px;
+    background: inherit;
+    border: inherit;
+    transition: all 0.3s ease;
+}
+
+.brands__more-btn{
+    display: none;
+}
+
+.brand-slide:hover{
+    opacity: 0.6;
+}
+
+.common-slider__list{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: auto;
+    transition: max-height 0.5s ease;
+}
+
+
+@media (min-width: 768px){
+    .brands__more-btn{
+        padding-left: 16px;
+        display: flex;
+        cursor: pointer;
+    }
+    .brand-slider{
+        gap: 0;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .technique-slider{
+        gap: 0;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .prices-slider{
+        gap: 0;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .common-slider__list{
+        overflow-y: hidden;
+        height: auto;
+        max-height: 170px;
+        gap: 16px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        flex-wrap: wrap;
+        flex-direction: row;
+        transition: max-height 0.6s ease-out;
+    }
+
+    .brand-slide{
+        width: 100%;
+    }
+
+    .expanded{
+        max-height: 100vh;
+    }
+
+    .expanded-image{
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width: 1120px){
+
+    .common-slider__list{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
