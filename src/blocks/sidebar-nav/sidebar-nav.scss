@@ -1,0 +1,30 @@
+.sidebar-nav{
+    flex-grow: 1;
+
+    &__list {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__item {
+        padding: 16px 0;
+        position: relative;
+        cursor: pointer;
+        transition-duration: 0.2s;
+    }
+
+    &__item:hover {
+        color: #7E7E82;
+    }
+
+    &__item:hover::before {
+        content: "";
+        margin-left: -24px;
+        margin-top: -4px;
+        position: absolute;
+        height: 32px;
+        border: 2px solid #41F6D7;
+        border-radius: 0 4px 4px 0;
+        background: #41F6D7;
+    }
+}

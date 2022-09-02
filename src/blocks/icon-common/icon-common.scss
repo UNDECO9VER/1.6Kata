@@ -1,0 +1,15 @@
+.icon-common {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    background: rgba(255, 62, 121, 1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,48 @@
+@import '../../less/variables.scss';
+.section{
+    gap: 16px;
+
+    &__header{
+        line-height: 24px;
+        font-weight: normal;
+        padding: 16px;
+        border-top: 1px solid #D9FFF5;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+        color: #7E7E82;
+    }
+
+    &__info{
+        font-size: 14px;
+        padding: 0 16px;
+        @media (min-width: 550px) {
+            P{
+                width: 52%;
+            }  
+        }
+        
+    }
+
+    &__info-btn{
+        font-family: inherit;
+        background:none;
+        border: none;
+        font-size: 16px;
+        line-height: 24px;
+        padding-top: 8px;
+        cursor: pointer;
+
+        &:hover .section__info-btn-arrow{
+            transform: translateX(10px);
+        }
+    }
+
+    &__info-btn-arrow{
+        transition: 0.3s;
+        fill: $color-pink;
+        padding-left: 6px;
+    }
+    
+}

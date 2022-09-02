@@ -1,0 +1,27 @@
+.more-btn {
+    display: none;
+    align-items: center;
+    background: inherit;
+    border: inherit;
+    transition: all 0.3s ease;
+
+    @media (min-width: $screen-sm){
+        font-family: 'TT Lakes';
+        padding-left: 24px;
+        font-size: 16px;
+        gap: 16px;
+        display: flex;
+        cursor: pointer;
+        align-self: flex-start;
+
+        &::before{
+            content: url('../img/learn_more_icon.png');
+        }
+    
+        &.more-btn--expanded::before{
+            content: url('../img/learn_more_icon.png');
+            transform: rotate(-180deg);
+        }
+    }
+
+}

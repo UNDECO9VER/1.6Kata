@@ -1,0 +1,53 @@
+@import '../../less/variables.scss';
+.nav{
+    background: #F8F8F8;
+
+    &__list {
+        display: flex;
+        padding: 10px 16px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        gap: 5px 5px;
+
+        @media (min-width: $screen-md){
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        @media (min-width: $screen-lg){
+            padding-left: 32px;
+            padding-right: 32px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        white-space: nowrap;
+        list-style-type: none;
+    }
+
+    &__link {
+        display: block;
+        line-height: 18px;
+        transition: 0.5s;
+        padding: 8px 12px;
+        color: #7E7E82;
+        border: 2px solid transparent;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+
+    &__link:hover {
+        box-sizing: border-box;
+        border: 2px solid #B8FFEC;
+        border-radius: 6px;
+        background: #FFFFFF;
+    }
+
+    
+    &__list::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    
+}

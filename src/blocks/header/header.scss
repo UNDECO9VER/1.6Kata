@@ -1,0 +1,120 @@
+@import '../../less/variables.scss';
+.header {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: auto auto;
+
+    @media (min-width: $screen-md){
+
+        &__list:first-child .header__list-item:last-child:before{
+            display: flex;
+        }
+    }
+
+    @media (min-width: $screen-lg){
+        padding-top: 42px;
+        padding-right: 32px;
+        grid-column-start: 2;
+        grid-row-start: 1;
+        background: none;
+
+        &__list:first-child {
+            display: none;
+        }
+
+        &__list-item:first-child {
+            display: none;
+        }
+        &__list-item:last-child:before {
+            display: none;
+        }
+    }
+
+    &__sub-list{
+        display: flex;
+        list-style-type: none;
+        gap: 16px;
+    }
+
+    &__sub-list-item{
+        display: flex;
+        gap: 8px;
+    }
+
+    &__panel {
+        padding: 18px 16px;
+        display: flex;
+        justify-content: space-between;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        border-bottom: #D9FFF5;
+        background: white;
+    
+        @media (min-width: $screen-md){
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        
+        @media (min-width: $screen-lg){
+            padding: 0;
+            grid-column-start: 2;
+            background: #F8F8F8;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        gap: 16px;
+    }
+    
+    &__list .header__list-item:last-child:before {
+        position: absolute;
+        content: "";
+        height: 32px;
+        width: 2px;
+        border-radius: 2px;
+        top: 50%;
+        transform: translateY(-15px);
+        left: 0;
+        background: #EAEAEA;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 16px;
+
+        @media (min-width: $screen-md){
+            position: relative;
+        }
+        @media (min-width: $screen-md){
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    &__list-item:first-child &__sub-list {
+        display: none;
+
+        @media (min-width: $screen-md){
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__sub-list:last-child{
+        padding-left: 16px;
+    }
+
+    &__list:first-child &__list-item:last-child:before{
+        display: none;
+    }
+
+
+    
+
+}

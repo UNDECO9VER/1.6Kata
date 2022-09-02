@@ -1,0 +1,23 @@
+@import '../../less/variables.scss';
+.title {
+    padding-top: 24px;
+    display: flex;
+    gap: 16px;
+    white-space: nowrap;
+    font-size: 28px;
+    
+    @media (min-width: $screen-lg){
+        padding: 0;
+        gap: 32px;
+        grid-row-start: 1;
+        grid-column-end: 1;
+    }
+    
+    &::before {
+        content: "";
+        height: 40px;
+        border: 2px solid #41F6D7;
+        background: #41F6D7;
+        border-radius: 0 4px 4px 0;
+    }
+}

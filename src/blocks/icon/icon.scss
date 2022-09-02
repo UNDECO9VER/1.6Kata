@@ -1,0 +1,32 @@
+@import '../../less/variables.scss';
+
+.icon{
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    text-decoration: none;
+
+    &__text{
+        display: none;
+        @media (min-width: $screen-lg){
+            white-space: nowrap;
+            display: flex;
+            color: #1B1C21;
+            transition-duration: 0.2s;
+        }
+    }
+
+    &__image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 62, 121, 1);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    &:hover{
+        opacity: 0.6;
+    }
+}

@@ -1,17 +1,46 @@
-$bgColor: #24292e;
-$text: #fff;
+@import '../blocks/header/header.scss';
+@import '../blocks/nav/nav.scss';
+@import '../blocks/icon-common/icon-common.scss';
+@import '../blocks/icon/icon.scss';
+@import '../blocks/title/title.scss';
+@import '../blocks/description-section/description-section.scss';
+@import '../blocks/show-more-btn/show-more-btn.scss';
+@import '../blocks/sidebar/sidebar.scss';
+@import '../blocks/sidebar-nav/sidebar-nav.scss';
+@import '../blocks/contacts-list/contacts-list.scss';
+@import '../blocks/container/container.scss';
+@import '../blocks/modal/modal.scss';
+@import '../blocks/section/section.scss';
+@import '../blocks/swiper/swiper.scss';
+@import '../blocks/footer/footer.scss';
+@import '../blocks/more-btn/more-btn.scss';
+@import '../blocks/main-container/maincontainer.scss';
+@import '../blocks/main-layout/main-layout.scss';
+@import '../fonts/TTLakes/TTLakes.scss';
+@import '/reset.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

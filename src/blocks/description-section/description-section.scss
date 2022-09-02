@@ -1,0 +1,102 @@
+@import '../../less/variables.scss';
+
+.description-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: $screen-md) {
+        flex-direction: row;
+        gap: 34px;
+        padding: 0 24px;
+    }
+
+    @media (min-width: $screen-lg){
+        flex-direction: row;
+        gap: 34px;
+        padding: 0 32px;
+    }
+    
+
+    &__description {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        padding: 0 16px;
+
+        @media (min-width: $screen-md){
+            padding: 0;
+            padding-top: 10px;
+            width: 50%;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-height: 95px;
+        overflow: hidden;
+        transition: 0.3s;
+        
+        @media (min-width: $screen-md){
+            line-height: 20px;
+            max-height: 160px;
+            padding: 0 0;
+        }
+    }
+
+    &__image{
+        height: 100%;
+        @media (min-width: $screen-md){
+            object-fit: fill;
+            border-radius: 6px;
+        }
+
+        @media (min-width: $screen-lg){
+            border-radius: 6px;
+        }
+    }
+
+    &__p{
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+    }
+
+    &__image-layout{
+        height: 186px;
+        @media (min-width: $screen-md){
+            width: 50%;
+            height: 208px;
+        }
+
+        @media (min-width: $screen-lg){
+            height: 250px;
+        }
+
+        @media (min-width: 1440px){
+            height: 307px;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+        display: flex;
+        align-self: flex-start;
+        align-items: center;
+        background: transparent;
+        border: transparent;
+        font-size: 16px;
+        gap: 16px;
+
+        &::before {
+            content: url('../img/learn_more_icon.png');
+        }
+
+        &--expanded::before {
+            content: url('../img/learn_more_icon.png');
+            transform: rotate(-180deg);
+        }
+    }
+}
